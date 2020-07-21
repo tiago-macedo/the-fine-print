@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
         <title>The Fine Print</title>
     </head>
     <body>
         <header>
-            <span>The Fine Print</span>
-            <span>Easily write superscripts and subscripts</span>
+            <h1>The Fine Print</h1>
+            <h2>Easily write superscripts and subscripts</h2>
         </header>
         <main>
             <div id="step1" class="step">
-                <span class="item">Step 1: What do you want to super/subscript?</span>
+                <span class="item">Step 1: What do you want to super/subscript?</span> <br>
+                <input type="text" name="original" id="original">
             </div>
             <div id="step2" class="step">
-                <span class="item">Step 2: Do you want a superscript or a subscript?</span>
+                <span class="item">Step 2: Do you want a superscript or a subscript?</span> <br>
+                <input type="radio" name="choice" id="sub"> <label for="sub">Subscript.</label>
+                <input type="radio" name="choice" id="sup"> <label for="sup">Superscript.</label>
             </div>
             <div id="step3" class="step">
-                <span class="item">Step 3: Copy the text below!</span>
+                <span class="item">Step 3: Copy the text below!</span> <br>
+                <input type="text" name="converted" id="converted">
             </div>
         </main>
     </body>
