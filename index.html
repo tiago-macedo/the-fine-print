@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
         <title>The Fine Print</title>
     </head>
     <body>
@@ -17,13 +18,29 @@
             </div>
             <div id="step2" class="step">
                 <span class="item">Step 2: Do you want a superscript or a subscript?</span> <br>
-                <input type="radio" name="choice" id="sub"> <label for="sub">Subscript.</label>
-                <input type="radio" name="choice" id="sup"> <label for="sup">Superscript.</label>
+                <label for="sub">
+                    <input type="radio" name="choice" id="sub">
+                    <span class="radio"></span>
+                    Subscript.
+                </label>
+                <br>
+                <label for="sup">
+                    <input type="radio" name="choice" id="sup">
+                    <span class="radio"></span>
+                    Superscript.
+                </label>
             </div>
             <div id="step3" class="step">
                 <span class="item">Step 3: Copy the text below!</span> <br>
                 <input type="text" name="converted" id="converted">
             </div>
         </main>
+
+        <footer>
+            <span id="info-icon">&#9432</span>
+            <span id="information">
+                By: Tiago Macedo  &mdash;  To: Everyone with no time to mess with Unicode  &mdash;  Using: Vue.js
+            </span>
+        </footer>
     </body>
 </html>
