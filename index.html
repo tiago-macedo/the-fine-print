@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
-        <script src="main.js" defer></script>
-        <title>The Fine Print</title>
-    </head>
-    <body>
-        <header>
-            <h1>The Fine Print</h1>
-            <h2>Easily write superscripts and subscripts</h2>
-        </header>
-        <main>
-            <div id="step1" class="step">
-                <span class="item">Step 1: What do you want to super/subscript?</span> <br>
-                <input type="text" name="original" id="original" v-model:value="input">
-            </div>
-            <div id="step2" class="step">
-                <span class="item">Step 2: Do you want a superscript or a subscript?</span> <br>
-                <label for="sub">
-                    <input type="radio" name="choice" id="sub">
-                    <span class="radio"></span>
-                    Subscript.
-                </label>
-                <br>
-                <label for="sup">
-                    <input type="radio" name="choice" id="sup">
-                    <span class="radio"></span>
-                    Superscript.
-                </label>
-            </div>
-            <div id="step3" class="step">
-                <span class="item">Step 3: Copy the text below!</span> <br>
-                <!-- <input type="text" name="converted" id="converted" v-model:value="output"> -->
-                <textarea name="converted" id="converted" cols="30" rows="1" readonly>{{ input ? input.sup() : input }}</textarea>
-            </div>
-        </main>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+		<script src="main.js" defer></script>
+		<title>The Fine Print</title>
+	</head>
+	<body>
+		<header>
+			<h1>The Fine Print</h1>
+			<h2>Easily write superscripts and subscripts</h2>
+		</header>
+		<main>
+			<div id="step1" class="step">
+				<span class="item">Step 1: What do you want to super/subscript?</span> <br>
+				<input type="text" id="original" v-model:value="input">
+			</div>
+			<div id="step2" class="step">
+				<span class="item">Step 2: Do you want a superscript or a subscript?</span>
+				<br>
+				<label>
+					<input type="radio" name="choice" value="sub" v-model="type">
+					<span class="mock-radio"></span>
+					Subscript.
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="choice" value="sup" v-model="type">
+					<span class="mock-radio"></span>
+					Superscript.
+				</label>
+			</div>
+			<div id="step3" class="step">
+				<span class="item">Step 3: Copy the text below!</span> <br>
+				<div id="output">{{ converted }}</div>
+				<!-- <input type="text" id="output" v-bind:value="converted" readonly> -->
+			</div>
+		</main>
 
-        <footer>
-            <span id="info-icon">&#9432</span>
-            <span id="information">
-                By: Tiago Macedo  &mdash;  To: Everyone with no time to mess with Unicode  &mdash;  Using: Vue.js
-            </span>
-        </footer>
-    </body>
+		<footer>
+			<span id="info-icon">&#9432</span>
+			<span id="information">
+				By: Tiago Macedo  &mdash;  To: Everyone with no time to mess with Unicode  &mdash;  Using: Vue.js
+			</span>
+		</footer>
+	</body>
 </html>
