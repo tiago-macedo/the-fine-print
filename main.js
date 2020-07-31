@@ -85,4 +85,3 @@ var vm = new Vue({
 		}
 	}
 })
-// this.input == null ? null : this.convert(input)

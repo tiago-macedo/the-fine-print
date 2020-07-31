@@ -93,15 +93,25 @@ label input:checked + .mock-radio {
 
 #output {
 	display: inline-block;
-	overflow: auto;
-	resize: both;
-	height: 1.5em;
-	width: 16em;
+	overflow-wrap: break-word;
+	min-height: 2em;
+	min-width: 16em;
+	max-width: 100%;
 	background-color: white;
 	border: 1px solid #aaa;
 	border-radius: 5px;
 	box-shadow: inset 0 0 2px lightgrey;
 }
+
+#copy-button {
+	display: inline-block;
+	float: right;
+	background-color: white;
+	border-radius: 5px;
+	padding: 0px 5px;
+	height: 1.5em;
+}
+
 footer {
 	position: fixed;
 	bottom: 0px;
