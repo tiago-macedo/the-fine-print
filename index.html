@@ -23,7 +23,9 @@
 		<!-- ****** faviconit.com favicons ****** -->
 		<link rel="stylesheet" href="style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+
+		<script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 		<script src="main.js" defer></script>
 		<title>The Fine Print</title>
 	</head>
@@ -53,9 +55,12 @@
 				</label>
 			</div>
 			<div id="step3" class="step">
-				<span class="item">Step 3: Copy the text below!</span> <br>
-				<div id="output">{{ converted }}</div>
-				<!-- <input type="text" id="output" v-bind:value="converted" readonly> -->
+				<span class="item">Step 3: Copy the text below!</span>
+				<br>
+				<div id="output-container">
+					<div id="output">{{ converted }}</div>
+					<span id="copy-button" data-clipboard-target="#output">📎 Copy</span>
+				</div>
 			</div>
 		</main>
 

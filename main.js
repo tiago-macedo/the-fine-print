@@ -69,6 +69,8 @@ function make_sub(text) {
 	return text.join('')
 }
 
+new ClipboardJS('#copy-button')
+
 var vm = new Vue({
 	el: 'main',
 	data: {
@@ -85,4 +87,3 @@ var vm = new Vue({
 		}
 	}
 })
-// this.input == null ? null : this.convert(input)
