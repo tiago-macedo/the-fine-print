@@ -53,20 +53,11 @@ var sub_dict = {
 	// 'Y': '\u',	'Z': '\u',
 }
 
-function make_super(text) {
-	text = text.split('')
-	for (key in text) {
-		text[key] = super_dict[text[key]]
-	}
-	return text.join('')
-}
-
-function make_sub(text) {
-	text = text.split('')
-	for (key in text) {
-		text[key] = sub_dict[text[key]]
-	}
-	return text.join('')
+function convert(text, sub_sup) {
+	return text.split('')
+		.map(
+			(char) => sub_sup === 'sup' ? super_dict[char] : sub_dict[char]
+		).join('')
 }
 
 new ClipboardJS('#copy-button')
@@ -80,8 +71,7 @@ var vm = new Vue({
 	computed: {
 		converted: function() {
 			if (this.input) {
-				if (this.type === 'sub') { return make_sub(this.input) }
-				else if (this.type === 'sup') { return make_super(this.input) }
+				return convert(this.input, this.type)
 			}
 			return null
 		}
