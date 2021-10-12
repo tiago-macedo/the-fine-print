@@ -147,8 +147,14 @@ footer {
 #info-icon { font-size: x-large; }
 
 #information {
-	display: none;
+	/* display: none; */
+	position: relative;
+	top: 2em;
+	transition: top 0.3s ease 0s;
 	margin-left: 10px;
 }
 
-#info-icon:hover ~ #information { display: inline-block; }
+#info-icon:hover ~ #information {
+	/* display: inline-block; */
+	top: -0.4em;
+}
